@@ -4,6 +4,6 @@ import Signup from './src/screens/Signup';
 
 export default function App() {
   return (
-    < Signup></Signup>
+    < Login></Login>
   );
 };
