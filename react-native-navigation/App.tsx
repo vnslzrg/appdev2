@@ -25,7 +25,7 @@ function HomeScreen() {
   );
 }
 
-function DetailsScreen({ route}) {
+function DetailsScreen({ route }) {
   const navigation = useNavigation();
 
   const { itemId, otherParam } = route.params;
@@ -52,7 +52,10 @@ const RootStack = createNativeStackNavigator({
   initialRouteName: 'Home',
   screens: {
     Home: HomeScreen,
-    Details: DetailsScreen,
+    Details: {
+      screen: DetailsScreen,
+      initialParams: { itemId: 42 },
+    },
   },
 });
 
